@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Billboard.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Health.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/jws/Desktop/200312_Unity-Network_Unity3D/UNet Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
