@@ -24,10 +24,21 @@ public class PlayerController : NetworkBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
-
-            Destroy(bullet, 2.0f);
+            CmdFire();
         }
+    }
+
+    // 코드 발동하는 척 하면서 방장한테 행동을 맡긴다. >> 즉 방장에서 행동이 이루어진다.
+    [Command]
+    void CmdFire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+
+        // 호스트에서 발생한 행동을 클라이언트에게 보내준다.
+        NetworkServer.Spawn(bullet);
+
+        Destroy(bullet, 2.0f);
     }
 }
