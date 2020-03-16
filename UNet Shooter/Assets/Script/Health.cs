@@ -8,6 +8,8 @@ public class Health : NetworkBehaviour
 {
     public const int maxHealth = 100;
 
+    public bool destroyOnDeath;
+
     // 자동으로 값을 클라이언트에게도 변경해주는 태그  & 훅 걸기
     [SyncVar(hook = "OnChangeHealth")]
     public int currentHealth = maxHealth;
@@ -38,10 +40,17 @@ public class Health : NetworkBehaviour
 
         if(currentHealth <= 0)
         {
-            currentHealth = maxHealth;
+            if(destroyOnDeath)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                currentHealth = maxHealth;
 
-            // Rpc : 서버에서 발동하면 >> 모든 클라이언트들에서도 자동으로 발동됨
-            RpcRespawn();
+                // Rpc : 서버에서 발동하면 >> 모든 클라이언트들에서도 자동으로 발동됨
+                RpcRespawn();
+            }
         }
     }
 

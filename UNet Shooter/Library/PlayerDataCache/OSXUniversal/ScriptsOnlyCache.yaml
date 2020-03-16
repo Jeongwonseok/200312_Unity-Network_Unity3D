@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Billboard
     - Bullet
+    - EnemySpawner
     - Health
     - PlayerController
     UnityEditor.Graphs.dll:
@@ -20,6 +21,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
     - UnityEngine.Networking.NetworkManager
     - UnityEngine.Networking.NetworkManagerHUD
@@ -83,6 +85,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11560}
     - Class: 114
       Script: {instanceID: 11656}
+    - Class: 114
+      Script: {instanceID: 13640}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -494,7 +498,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: ccbacb43089ef930e7306a586a8e8958
+      Hash: 194ae1e58ac07386bef55366d23f3820
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
@@ -630,6 +634,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 26cbe775b238106228d908a3aba5cbfe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemySpawner
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main.unity
