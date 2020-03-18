@@ -37,6 +37,5 @@ Unity-Network Shooting Game (Unity3D)
  
 ****
 # 4. 참고
-* 게임 플레이 영상 : 
 * 참고 URL : https://www.youtube.com/playlist?list=PLctzObGsrjfxQ6A8KX1heuQaNkL5xMA2D
 
