@@ -34,23 +34,9 @@ Unity-Network Shooting Game (Unity3D)
 # 3. 개발 환경
 * Unity 2019.2.9f1 Personal
 * Visual Studio 2019
-
-****
-# 4. 주요 구현부
-## 4.1. Network Manager
-
-
-## 4.2. Player
-
-
-## 4.3. HP
-
-
-## 4.4. Enemy
-
  
 ****
-# 5. 참고
+# 4. 참고
 * 게임 플레이 영상 : 
 * 참고 URL : https://www.youtube.com/playlist?list=PLctzObGsrjfxQ6A8KX1heuQaNkL5xMA2D
 
